@@ -4,7 +4,7 @@
 
 <h2>Overview:</h2>
 <% @brands.each do |brand| %>
-  <p>Name: <%= brand.name %></p>
+  <p><%= link_to brand.name, brand_path(brand) %></p>
   <p>Founded: <%= brand.year_of_founding %></p>
   <%= image_tag brand.logo.thumbnail %>
 <% end %>

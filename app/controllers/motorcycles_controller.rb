@@ -1,4 +1,4 @@
-class MotorCyclesController < ApplicationController
+class MotorcyclesController < ApplicationController
 
   def create
     @brand = Brand.find(params[:brand_id])

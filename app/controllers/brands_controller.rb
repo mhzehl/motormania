@@ -7,6 +7,7 @@ class BrandsController < ApplicationController
 
   def show
     @brand = Brand.find(params[:id])
+    @motorcycle = Motorcycle.new
   end
 
   def create
