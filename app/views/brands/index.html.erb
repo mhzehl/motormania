@@ -1,0 +1,16 @@
+<h1>Motorcycle Brands</h1>
+
+<hr>
+
+<h2>Overview:</h2>
+<% @brands.each do |brand| %>
+  <p>Name: <%= brand.name %></p>
+  <p>Founded: <%= brand.year_of_founding %></p>
+<% end %>
+
+<hr>
+
+<h2>Missing a brand?</h2>
+<p>Add your missing brand below:</p>
+
+<%= render 'form' %>
