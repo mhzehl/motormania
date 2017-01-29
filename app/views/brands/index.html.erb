@@ -6,6 +6,7 @@
 <% @brands.each do |brand| %>
   <p>Name: <%= brand.name %></p>
   <p>Founded: <%= brand.year_of_founding %></p>
+  <%= image_tag brand.logo.thumbnail %>
 <% end %>
 
 <hr>
