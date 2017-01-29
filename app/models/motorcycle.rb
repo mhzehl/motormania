@@ -2,5 +2,5 @@ class Motorcycle < ApplicationRecord
   belongs_to :brand
   mount_uploader :photo, ImageUploader
 
-  validates_presence_of :type, :category, :production_since
+  validates_presence_of :name, :category, :production_since
 end

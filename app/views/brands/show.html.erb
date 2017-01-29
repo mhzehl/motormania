@@ -1,7 +1,15 @@
+<%= link_to "Back", root_path %>
+
 <h1><%= @brand.name %></h1>
 <%= image_tag @brand.logo.thumbnail %>
 
 <h2>Models:</h2>
+<% @brand.motorcycles.each do |motorcycle| %>
+<h3><%= motorcycle.name %></h3>
+<%= image_tag motorcycle.photo.medium %>
+<%= button_to "Delete", brand_motorcycle_path(@brand, motorcycle), method: :delete %>
+<% end %>
+
 
 <hr>
 
