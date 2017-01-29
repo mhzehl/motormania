@@ -29,6 +29,6 @@
   </div>
 
   <div>
-    <%= f.submit "Add" %>
+    <%= f.submit (@brand.new_record? ? "Add" : "Update") %>
   </div>
 <% end %>

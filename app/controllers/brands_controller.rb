@@ -21,6 +21,16 @@ class BrandsController < ApplicationController
     end
   end
 
+  def update
+    @brand = Brand.find(params[:id])
+
+    if @brand.update(brand_params)
+      redirect_to @brand
+    else
+      render 'form'
+    end
+  end
+
   private
 
   def brand_params
