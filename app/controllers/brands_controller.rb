@@ -36,7 +36,7 @@ class BrandsController < ApplicationController
 
     @brand.destroy
 
-    redirect_to root_path, notice: "Artist successfully removed"
+    redirect_to root_path, notice: "Brand successfully removed"
   end
 
   private
