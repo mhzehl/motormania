@@ -24,3 +24,5 @@
 <p>Make your changes below: </p>
 
 <%= render 'form' %>
+
+<%= link_to "Delete Brand", brand_path(@brand), method: :delete, data: { confirm: "Are you sure?" } %>

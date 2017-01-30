@@ -1,7 +1,7 @@
 class BrandsController < ApplicationController
 
   def index
-    @brands = Brand.all
+    @brands = Brand.all.order(params[:sort])
     @brand = Brand.new
   end
 
@@ -29,6 +29,14 @@ class BrandsController < ApplicationController
     else
       render 'form'
     end
+  end
+
+  def destroy
+    @brand = Brand.find(params[:id])
+
+    @brand.destroy
+
+    redirect_to root_path, notice: "Artist successfully removed"
   end
 
   private

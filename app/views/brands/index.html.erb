@@ -2,6 +2,9 @@
 
 <hr>
 
+<%= link_to "Sort by name A-Z", :sort => "name ASC" %>
+<%= link_to "Sort by name Z-A", :sort => "name DESC" %>
+
 <h2>Overview:</h2>
 <% @brands.each do |brand| %>
   <p><%= link_to brand.name, brand_path(brand) %></p>
